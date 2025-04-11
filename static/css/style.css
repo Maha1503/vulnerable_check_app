@@ -1,0 +1,144 @@
+/* Import Hacker Font */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+/* Global Styles */
+body {
+  background-color: #000;
+  background-image: linear-gradient(0deg, #000 50%, #0e0e0e 50%);
+  background-size: 10px 10px;
+  color: lightgreen;
+  font-family: "Space Mono", monospace;
+  padding: 65px 55px;
+  opacity: 0.95;
+}
+
+/* Header */
+header {
+  background-color: #111;
+  border-bottom: 2px solid #0f0;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 15px #0f0;
+}
+
+header h1 {
+  color: lightgreen;
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+/* Navigation */
+nav {
+  background: #111;
+  padding: 15px 25px;
+  border: 1px solid #0f0;
+  margin: 20px 0;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+nav a {
+  color: #0f0;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  text-shadow: 0 0 5px #0f0;
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  background: #000;
+  border: 2px dashed #0f0;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #0f0;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Headings */
+h2 {
+  color: lightgreen;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Forms */
+form {
+  margin-top: 20px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="file"] {
+  background: #000;
+  color: lightgreen;
+  border: 1px solid #0f0;
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 500px;
+  font-family: "Space Mono", monospace;
+}
+
+form input[type="submit"] {
+  background: #0f0;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Space Mono", monospace;
+  transition: background 0.2s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+  background: #00cc00;
+}
+
+/* Code Blocks & Output */
+pre, code {
+  background: #111;
+  color: #0f0;
+  padding: 15px;
+  border-left: 3px solid #0f0;
+  margin-top: 20px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+/* Hidden Easter Egg Text */
+.hidden {
+  opacity: 0%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hidden:hover {
+  opacity: 100%;
+}
+
+/* Links Inside Main Content */
+main a {
+  color: #0f0;
+}
+
+main a:hover {
+  text-shadow: 0 0 5px #0f0;
+  text-decoration: underline;
+}
+
+/* Footer (optional) */
+footer {
+  text-align: center;
+  color: #0f0;
+  padding: 15px;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
