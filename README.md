@@ -73,7 +73,7 @@ Visit `http://localhost:5000` in your browser.
 
 > Hacker mode activated.
 
-![screenshot](https://user-images.githubusercontent.com/placeholder/vulnlab_hacker_ui.png)
+![screenshot](https://github.com/Maha1503/vulnerable_check_app/blob/main/Screenshot%20(278).png)
 
 ---
 
