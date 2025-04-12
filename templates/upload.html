@@ -1,8 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2>Upload a File</h2>
+<h2>File Upload Lab {{ lab }}</h2>
+
 <form method="POST" enctype="multipart/form-data">
-    <input type="file" name="file">
-    <input type="submit" value="Upload">
+    <label>Select a file to upload:</label><br><br>
+    <input type="file" name="file" required>
+    <br><br>
+    <button type="submit">Upload</button>
 </form>
+
+{% if error %}
+    <div style="color: red; margin-top: 15px;"><strong>Error:</strong> {{ error }}</div>
+{% endif %}
+
+{% if lab == '1' %}
+    <p style="margin-top: 20px;"><strong>Lab 1:</strong> Upload any file. There is no validation or filtering.</p>
+{% elif lab == '2' %}
+    <p style="margin-top: 20px;"><strong>Lab 2:</strong> Only <code>.png</code> and <code>.jpg</code> file extensions are allowed. Try uploading a different file type!</p>
+{% elif lab == '3' %}
+    <p style="margin-top: 20px;"><strong>Lab 3:</strong> The server checks file content. Try uploading a file that contains the string <code>&lt;script&gt;</code> inside it.</p>
+{% elif lab == 'done' %}
+    <h3 style="margin-top: 20px; color: green;">🎉 Congratulations! You have completed all three file upload labs!</h3>
+{% endif %}
+
 {% endblock %}

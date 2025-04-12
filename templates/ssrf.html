@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>SSRF Lab {{ lab }}: Exploiting SSRF Vulnerabilities</h2>
+
+{% if lab == '1' %}
+    <p><strong>Lab 1:</strong> SSRF (Server-Side Request Forgery) vulnerability occurs when an attacker can make the server fetch any URL. In this lab, you will exploit this vulnerability to fetch external content.</p>
+    <p><strong>Hint:</strong> Try injecting an external url.</p>
+{% elif lab == '2' %}
+    <p><strong>Lab 2:</strong> Now, we’re going to test SSRF to access internal resources (like localhost or 127.0.0.1). The goal is to exploit SSRF to fetch internal resources that should be inaccessible from the outside.</p>
+    <p><strong>Hint:</strong> Try injecting an internal url from this webapp!</p>
+{% elif lab == '3' %}
+    <p><strong>Lab 3:</strong> This lab demonstrates SSRF to access cloud metadata services, such as AWS. Servers in cloud environments often expose sensitive metadata through specific internal IPs, which an attacker can exploit.</p>
+    <p><strong>Hint:</strong> Try injecting links from AWS to get metadata</p>
+{% endif %}
+
+<form method="POST" action="/ssrf?lab={{ lab }}">
+    URL: <input name="url" type="text" placeholder="Enter URL" required><br>
+    <input type="submit" value="Submit">
+</form>
+
+{% if error %}
+    <p style="color: red;">{{ error }}</p>
+{% elif output %}
+    <h3>Output:</h3>
+    <p>{{ output }}</p>
+{% endif %}
+
+{% if next_lab %}
+    <p><a href="/ssrf?lab={{ next_lab }}">Proceed to the next lab (Lab {{ next_lab }})</a></p>
+{% endif %}
+
+{% endblock %}

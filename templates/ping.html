@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Command Injection Lab {{ lab }}</h2>
+
+<form method="POST">
+    Host to ping: <input name="host" type="text" placeholder="127.0.0.1">
+    <input type="submit" value="Ping">
+</form>
+
+{% if output %}
+    <h3>Output:</h3>
+    <pre>{{ output }}</pre>
+{% endif %}
+
+{% if error %}
+    <div style="color: red;"><strong>{{ error }}</strong></div>
+{% endif %}
+
+{% if next_lab %}
+    <form method="GET" action="/ping">
+        <input type="hidden" name="lab" value="{{ next_lab }}">
+        <button type="submit">Proceed to Lab {{ next_lab }}</button>
+    </form>
+{% endif %}
+
+{% if lab == '1' %}
+    <p><strong>Lab 1:</strong> Here you can ping anyone, anything you like :) But the question is can you only ping or maybe you could reveal who am i?</p>
+{% elif lab == '2' %}
+    <p><strong>Lab 2:</strong> VERY GOOD!!! But I need to learn more so I have used basic filtering. Try to bypass it.</p>
+{% elif lab == '3' %}
+    <p><strong>Lab 3:</strong> You are hella smart, so I have removed all the commands that can be potential "INJECT". The command is safely executed using arguments so it is much harder to inject! But maybe a keyword could make it work.</p>
+{% endif %}
+{% endblock %}

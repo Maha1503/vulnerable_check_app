@@ -2,8 +2,24 @@
 {% block content %}
 <h2>Login (Broken Auth)</h2>
 <form method="POST">
-    Username: <input name="username"><br>
-    Password: <input name="password"><br>
+    <label>Username:</label> <input name="username" type="username"><br>
+    <label>Password:</label> <input name="password" type="password"><br><br>
     <input type="submit" value="Login">
 </form>
+
+{% if lab == '1' %}
+    <p><strong>Hint for Lab 1:</strong> You don't need any credentials to log in. Just hit the login button!</p>
+    <p>After solving Lab 1, you will automatically proceed to the next step.</p>
+{% elif lab == '2' %}
+    <p><strong>Hint for Lab 2:</strong> The valid credentials are hardcoded. Try different login credentials, for common ones refer to : <a href="https://github.com/danielmiessler/SecLists"> Common Usernames and Passwords</a> </p>
+    <p>After solving Lab 2, you will automatically proceed to the next step.</p>
+{% elif lab == '3' %}
+    <p><strong>Hint for Lab 3:</strong> Try using SQL Injection. For example, use 'admin' as the username and inject a SQL comment (e.g., 'admin' --) to bypass authentication.</p>
+    <p>After solving Lab 3, you will be redirected to the admin panel.</p>
+{% endif %}
+
+{% if error %}
+    <p style="color: red;">{{ error }}</p>
+{% endif %}
+
 {% endblock %}

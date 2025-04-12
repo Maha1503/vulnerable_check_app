@@ -1,5 +1,74 @@
 {% extends 'base.html' %}
+
 {% block content %}
 <h2>Welcome to the VulnLab</h2>
 <p>This app contains real-world vulnerable features. DO NOT deploy in production.</p>
+
+<!-- Typewriter effect container -->
+<div id="typewriter-container">
+  <p id="typewriter-text"></p>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const typewriterContainer = document.getElementById("typewriter-container");
+  const sentences = [
+    "Hello, I am VulnLab, a very silly vulnerable application.",
+    "I do not know anything about cybersecurity.",
+    "Can you help me learn about security by solving these labs?"
+  ];
+
+  let currentSentenceIndex = 0;
+
+  function typeSentence(sentence, callback) {
+    let charIndex = 0;
+    typewriterContainer.innerHTML = ""; // Clear the container at the start
+
+    function typeCharacter() {
+      if (charIndex < sentence.length) {
+        typewriterContainer.innerHTML += sentence.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeCharacter, 100); // Adjust typing speed here
+      } else if (callback) {
+        callback();
+      }
+    }
+
+    typeCharacter();
+  }
+
+  function clearAndTypeNext() {
+    if (currentSentenceIndex < sentences.length) {
+      // After typing each sentence, clear the container
+      typewriterContainer.innerHTML = "";
+      typeSentence(sentences[currentSentenceIndex], function() {
+        currentSentenceIndex++;
+        if (currentSentenceIndex < sentences.length) {
+          setTimeout(clearAndTypeNext, 1000); // Delay before next sentence
+        }
+      });
+    }
+  }
+
+  // Start the typing effect when the page is loaded
+  clearAndTypeNext();
+});
+
+</script>
+
+<style>
+#typewriter-container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  color: lightgreen;
+  font-family: "Space Mono", monospace;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.5;
+  background-color: transparent;
+}
+</style>
+
 {% endblock %}

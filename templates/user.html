@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>SQL Injection Lab: Fetch User Data</h2>
+
+<p><strong>Lab:</strong> You can exploit SQL injection here by passing a special input in the username field.</p>
+<p><strong>Hint:</strong> Try injecting payload in the username field to retrieve all users</p>
+
+<form method="GET" action="/user">
+    Username: <input type="text" name="username" placeholder="Enter username"><br>
+    <input type="submit" value="Submit">
+</form>
+
+{% if error %}
+<p style="color: red;">{{ error }}</p>
+{% elif user %}
+    <h3>User Details:</h3>
+    <ul>
+        <li><strong>Username:</strong> {{ user.username }}</li>
+        <li><strong>Email:</strong> {{ user.email }}</li>
+        <li><strong>Id:</strong> {{ user.id }}</li>
+        <li><strong>Password:</strong> {{ user.password }}</li>
+    </ul>
+{% endif %}
+{% endblock %}

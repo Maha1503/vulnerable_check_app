@@ -69,6 +69,23 @@ h2 {
   margin-bottom: 20px;
 }
 
+/* Typewriter Animation (Updated) */
+#typewriter-container {
+  text-align: center;
+  font-size: 1.5em;
+  font-family: 'Space Mono', monospace;
+  color: lightgreen;
+
+  /* Fix height for constant box size */
+  height: 150px; /* Fixed height */
+  line-height: 1.5em; /* To keep line spacing nice */
+  overflow: hidden; /* Hide overflowing text */
+  white-space: nowrap; /* Prevent text wrapping */
+  width: 100%; /* Full width of the container */
+  max-width: 600px; /* Optional, to limit width */
+  margin: 0 auto; /* Center align */
+}
+
 /* Forms */
 form {
   margin-top: 20px;
@@ -76,6 +93,7 @@ form {
 
 form input[type="text"],
 form input[type="password"],
+form input[type="username"],
 form input[type="file"] {
   background: #000;
   color: lightgreen;
@@ -99,7 +117,24 @@ form input[type="submit"] {
   transition: background 0.2s ease-in-out;
 }
 
+
 form input[type="submit"]:hover {
+  background: #00cc00;
+}
+
+button {
+  background: #0f0;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Space Mono", monospace;
+  transition: background 0.2s ease-in-out;
+}
+
+button:hover {
   background: #00cc00;
 }
 
