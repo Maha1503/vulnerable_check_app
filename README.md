@@ -75,7 +75,9 @@ Visit `http://localhost:5000` in your browser.
 
 > Hacker mode activated.
 
-![screenshot](https://github.com/Maha1503/vulnerable_check_app/blob/main/Screenshot%20(278).png)
+![screenshot](https://github.com/Maha1503/vulnerable_check_app/blob/main/Screenshot%20(280).png)
+![screenshot](https://github.com/Maha1503/vulnerable_check_app/blob/main/Screenshot%20(281).png)
+![screenshot](https://github.com/Maha1503/vulnerable_check_app/blob/main/Screenshot%20(282).png)
 
 ---
 
