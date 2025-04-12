@@ -21,7 +21,9 @@ vulnlab/
 │   ├── index.html
 │   ├── login.html
 │   ├── upload.html
-│   ├── search.html
+│   ├── ssrf.html
+|   ├── ping.html
+|   ├── user.html
 │   └── admin.html
 ├── static/
 │   ├── css/
@@ -105,6 +107,4 @@ This project is for **educational** and **ethical hacking** purposes only. Do no
 ### 🧠 Authors & Credits
 
 Built with ❤️ by ethical hackers, for ethical hackers.
-
----
 
