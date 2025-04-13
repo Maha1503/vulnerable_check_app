@@ -1,4 +1,4 @@
-## 🔓 VulnLab — Intentionally Vulnerable Flask App
+## VulnLab — Intentionally Vulnerable Flask App
 
 > **⚠️ For educational and ethical hacking use only. DO NOT deploy in production.**
 
@@ -8,7 +8,7 @@ It features a **hacker terminal aesthetic**, glowing retro green UI, and a clean
 
 ---
 
-### 🧱 Project Structure
+### Project Structure
 
 ```
 vulnlab/
@@ -34,7 +34,7 @@ vulnlab/
 
 ---
 
-### 🚩 Vulnerabilities Covered
+### Vulnerabilities Covered
 
 | Route              | Vulnerability                        | Category                |
 |-------------------|--------------------------------------|-------------------------|
@@ -51,13 +51,13 @@ vulnlab/
 
 ---
 
-### 🛠️ Getting Started
+### Getting Started
 
-#### ✅ Requirements
+#### Requirements
 - Python 3.x
 - pip
 
-#### 📦 Installation
+#### Installation
 
 ```bash
 git clone https://github.com/Maha1503/vulnlab.git
@@ -71,7 +71,7 @@ Visit `http://localhost:5000` in your browser.
 
 ---
 
-### 💻 Screenshots
+### Screenshots
 
 > Hacker mode activated.
 
@@ -81,22 +81,22 @@ Visit `http://localhost:5000` in your browser.
 
 ---
 
-### 🎯 Use Cases
+### Use Cases
 
-- ✅ Security demos & workshops
-- ✅ CTF-style training environments
-- ✅ Practice exploitation techniques (SQLi, XSS, Command Injection, SSRF, etc.)
-- ✅ Learn secure coding by fixing each flaw
+- Security demos & workshops
+- CTF-style training environments
+- Practice exploitation techniques (SQLi, XSS, Command Injection, SSRF, etc.)
+- Learn secure coding by fixing each flaw
 
 ---
 
-### 🚫 Legal Disclaimer
+### Legal Disclaimer
 
 This project is for **educational** and **ethical hacking** purposes only. Do not scan or deploy this app on public-facing servers. The authors are not responsible for any misuse.
 
 ---
 
-### 💡 Want More?
+### Want More?
 
 - [ ] Score-based CTF engine with flags
 - [ ] Stored XSS, CSRF, JWT manipulation
@@ -106,7 +106,7 @@ This project is for **educational** and **ethical hacking** purposes only. Do no
 
 ---
 
-### 🧠 Authors & Credits
+### Authors & Credits
 
 Built with ❤️ by ethical hackers, for ethical hackers.
 
